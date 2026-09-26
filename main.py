@@ -8,6 +8,7 @@ def main():
     parser.add_argument('mode', choices=['encrypt', 'decrypt', 'brute'])
     parser.add_argument('text', help='text to encrypt/decrypt')
     parser.add_argument('--key',type=int, help='key for encryption/decryption')
+    parser.add_argument('--all', action='store_true', help='brute: show all 26 candidates, best first')
     args = parser.parse_args()
 
     if args.mode in ['encrypt', 'decrypt'] and args.key is None:
@@ -18,7 +19,13 @@ def main():
     elif args.mode == 'decrypt':
         print(decrypt(args.text, args.key))
     elif args.mode == 'brute':
-        brute_force(args.text)
+        candidates = brute_force(args.text)
+        if args.all:
+            for key, plaintext in candidates:
+                print(key, plaintext)
+        else:
+            key, plaintext = candidates[0]
+            print(f'key {key}: {plaintext}')
 
 if __name__ == '__main__':
     main()
