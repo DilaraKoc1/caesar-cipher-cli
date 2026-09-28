@@ -9,7 +9,10 @@ python main.py encrypt "Hello World" --key 3
 python main.py decrypt "Khoor Zruog" --key 3
 python main.py brute "Khoor Zruog"
 python main.py brute "Khoor Zruog" --all
+python main.py
 ```
+
+Without arguments, `main.py` asks for the mode, the text and, for encrypt and decrypt, the key.
 
 Only letters are shifted. Everything else stays as it is.
 
@@ -27,7 +30,9 @@ python -m unittest -v
 ```
 
 The tests cover shifting, encrypting and decrypting with every key, and brute force on
-known examples, including a text without spaces and a single word. Only the standard library is needed.
+known examples, including a text without spaces and a single word. `test_main.py` covers
+the interactive mode and checks that passing arguments still works. Only the standard
+library is needed.
 
 ## Files
 
@@ -36,6 +41,7 @@ known examples, including a text without spaces and a single word. Only the stan
 - `build_bigrams.py`: counts the letter pairs in the book
 - `bigrams.json`: the counts
 - `test_caesar.py`: unit tests
+- `test_main.py`: tests for the command-line interface
 
 ## Why it is insecure
 
