@@ -40,7 +40,7 @@ library is needed.
 - `main.py`: command-line interface
 - `build_bigrams.py`: counts the letter pairs in the book
 - `bigrams.json`: the counts
-- `test_caesar.py`: unit tests
+- `test_caesar.py`: tests for `caesar.py`
 - `test_main.py`: tests for the command-line interface
 
 ## Why it is insecure

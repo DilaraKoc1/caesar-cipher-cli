@@ -33,7 +33,7 @@ class InteractiveTest(unittest.TestCase):
         self.assertIn('14 Wtaad Ldgas', output)
 
     def test_asks_again_after_invalid_answers(self):
-        output = run(['main.py'], ['x', 'e', '', 'Hello', 'drei', '3'])
+        output = run(['main.py'], ['x', 'e', '', 'Hello', 'three', '3'])
         self.assertIn('Please enter e, d or b.', output)
         self.assertIn('Please enter some text.', output)
         self.assertIn('Please enter a whole number', output)
