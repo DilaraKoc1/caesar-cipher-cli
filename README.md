@@ -1,6 +1,6 @@
-# Caesar Cipher CLI
+# Cipher Breaker
 
-Encrypt, decrypt and brute-force text with the Caesar cipher.
+Encrypt, decrypt and break classical ciphers. It currently supports the Caesar cipher.
 
 ## Usage
 
