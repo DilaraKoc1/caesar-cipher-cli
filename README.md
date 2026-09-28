@@ -20,12 +20,22 @@ With `--all` it prints all 26 candidates with the best first.
 To rebuild the counts, save https://www.gutenberg.org/cache/epub/1342/pg1342.txt as
 `corpus/pride_and_prejudice.txt` and run `python build_bigrams.py`.
 
+## Tests
+
+```
+python -m unittest -v
+```
+
+The tests cover shifting, encrypting and decrypting with every key, and brute force on
+known examples, including a text without spaces and a single word. Only the standard library is needed.
+
 ## Files
 
 - `caesar.py`: cipher functions and bigram scoring
 - `main.py`: command-line interface
 - `build_bigrams.py`: counts the letter pairs in the book
 - `bigrams.json`: the counts
+- `test_caesar.py`: unit tests
 
 ## Why it is insecure
 
