@@ -35,7 +35,9 @@ python -m unittest -v
 ```
 
 The tests cover shifting, encrypting and decrypting with every key, and brute force on
-known examples, including a text without spaces and a single word. `test_main.py` covers
+known examples, including a text without spaces and a single word. `test_vigenere.py`
+checks the Vigenere cipher against a known example and against Caesar with a one-letter
+keyword. `test_main.py` covers
 the interactive mode and checks that passing arguments still works. Only the standard
 library is needed.
 
